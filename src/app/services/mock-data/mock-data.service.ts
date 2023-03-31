@@ -1012,7 +1012,8 @@ export class MockDataService {
   constructor() {}
 
   getContacts$(startIndex: number = 0): Observable<IContact[]> {
-    return of(this.mockData.slice(startIndex, startIndex + 10000));
+    // added users will not be shown on limited list
+    return of(this.mockData.slice(startIndex, startIndex + 100));
   }
 
   addNewContact(contact: IContact): void {
