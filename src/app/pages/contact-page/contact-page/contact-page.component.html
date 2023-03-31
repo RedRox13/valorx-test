@@ -1,0 +1,15 @@
+<form [formGroup]="form" class="form">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" formControlName="contact_name">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="phone">Phone number</label>
+        <input type="text" name="phone" id="phone" formControlName="phone_number">
+    </div>
+</form>
+<button (click)="onFormSubmit()" [disabled]="!form.valid">Submit</button>
